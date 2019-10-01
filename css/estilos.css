@@ -1,0 +1,221 @@
+body {
+   background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Source Code Pro', monospace;
+}
+/*tabla*/
+td{
+
+   font-weight: bold; 
+   width :130px;
+   height: 70px;
+}
+
+/* logo */
+.logo {
+  padding: 35px 0;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
+/* formulario, input y botón */
+#form {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+}
+
+#form div {
+  padding: 0;
+}
+
+#poke-search {
+  width: 99%;
+  padding: 0 10px;
+  height: 40px;
+  background: rgba(255, 255, 255, .4);
+  border-radius: 5px;
+  color: #3A3A84;
+  font-size: 12px;
+}
+
+#poke-search::placeholder {
+  color: #3A3A84;
+  font-size: 12px;
+}
+
+#poke-search:focus {
+  border-radius: 6px;
+  outline: none;
+  border-bottom: 1px solid #3A3A84;
+}
+
+#submit-btn {
+ width: 40px;
+ padding: 0;
+ height: 40px;
+ background-color: transparent;
+ border: none;
+ outline: none;
+ cursor: pointer;
+ background-image: url('../img/close-pokeball.png');
+}
+
+#submit-btn:hover {
+  background-image: url('../img/open-pokeball.png');
+}
+
+#submit-btn:disabled{
+  opacity: .8;
+}
+
+/* sección de carga */
+#loading-gif, #loading, #loading-gif-modal, #loading-modal {
+  padding: 20px;
+  color: #9CCE84;
+}
+
+/* contenedor de pokemons */
+#results-container {
+  background: rgba(255, 255, 255, .8);
+  text-align: center;
+  padding: 30px 10px 50px 10px;
+  margin: 40px 0;
+  border-radius: 5px;
+  min-height: 300px;
+  position: relative;
+}
+
+#results-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#results-container ul li {
+  display:inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+}
+
+#results-container ul li div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #A8A878;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  box-shadow: 3px 4px 3px 1px #ccc;
+}
+
+#results-container ul li div:hover {
+  background-color: rgba(168, 168, 120, .8);
+}
+
+#results-container figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#results-container ul li div span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 3px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: white;
+}
+
+.previous, .next ,.enviar{
+  position: absolute;
+  color: #E9F8E8;
+  background-color: #3FC23C;
+}
+
+.previous {
+  bottom: 10px;
+  left: 10px;
+}
+
+.next {
+  bottom: 10px;
+  right: 10px;
+}
+
+.enviar{
+ 
+  /*right: -650px;*/
+}
+/*popup confirmación*/
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  right: -500px;
+  bottom: 100px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #2C8C2A;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+}
